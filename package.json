@@ -1,0 +1,14 @@
+{
+	"name": "Smartmirror",
+	"version": "0.0.1",
+	"description": "A smartmirror displaying all of your based needs",
+	"author": "Andre Smith",
+	"private": true,
+	"dependencies": {
+		"envy": "git://github.com/geraldbaeck/node-envy.git",
+		"node-static": "*",
+		"request": "*",
+		"googleapis": "*",
+		"google-auth-library": "*"
+	}
+}
