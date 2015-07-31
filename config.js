@@ -5,7 +5,7 @@ var lang = "en";
 
 var weatherParams = {
 	'q': 'New York, US',
-	'units': 'metric',
+	'units': 'standard',
 	'lang': lang,
 	'weatherRefresh': 600000,
 	'forecastRefresh': 18000000
