@@ -9,6 +9,29 @@ jQuery.fn.updateWithText = function(text, speed) {
 	}
 };
 
+function calCtrl($scope, $timeout) {
+	var cal = function() {
+		console.log("Getting calendar data.");
+		new ical_parser('http://localhost:8080/proxy?url='+icalFeed.url, function(raw_cal){
+			var raw_events = raw_cal.getEvents();
+			$scope.events = [];
+			for(var i = 0; i < raw_events.length; i++) {
+				raw_events[i]['timestamp'] = new Date(Date.parse(raw_events[i]['DTSTART;VALUE=DATE-TIME'].substring(0, 4)+ '-' +
+					raw_events[i]['DTSTART;VALUE=DATE-TIME'].substring(4, 8)+'-'+
+					raw_events[i]['DTSTART;VALUE=DATE-TIME'].substring(6, 8)+
+					raw_events[i]['DTSTART;VALUE=DATE-TIME'].substring(8, 11)+':'+
+					raw_events[i]['DTSTART;VALUE=DATE-TIME'].substring(11, 13)+':'+
+					raw_events[i]['DTSTART;VALUE=DATE-TIME'].substring(13, 16)));
+				if(raw_events[i]['timestamp'] > new Date(Date.now())) {
+					$scope.events.push(raw_events[i]);
+				}
+			}
+		});
+		$timeout(cal, icalFeed.refresh);
+	};
+	cal();
+}
+
 function messageCtrl($scope, $timeout) {
 	$scope.messagesShow = messages.show;
 	$scope.message = messages.data[0];
@@ -125,4 +148,25 @@ function WeatherCtrl($scope, $resource, $timeout) {
 		$timeout(forecast, weatherParams.forecastRefresh);
 	};
 	forecast();
+}
+
+// Getting Twitter Data
+function getTweets() {
+	$http.get(baseURL + 'tweets')
+		.success(function(tweets){
+			$scope.tweets = tweets;
+			setTweet();
+		})
+
+		.error(function(error){
+			console.error(error);
+		});
+}
+
+function setTweet() {
+	angular.element(document.getElementById("tweet")).removeClass("slideInRight").addClass("slideOutLeft");
+	$scope.tweet = $scope.tweets.splice(0, 1)[0];
+	$timeout(function(){
+		angular.element(docment.getElementById("tweet")).removeClass("slideOutLeft").addClass("slideInRight");
+	}, 1000);
 }

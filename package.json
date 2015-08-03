@@ -9,6 +9,8 @@
 		"node-static": "*",
 		"request": "*",
 		"googleapis": "*",
-		"google-auth-library": "*"
+		"google-auth-library": "*",
+		"twitter": "*",
+		"express": "*"
 	}
 }

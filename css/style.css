@@ -182,7 +182,80 @@ body, html {
 	display: none;
 }
 
+#schedule {
+	line-height: 1.5;
+	position: absolute;
+	top: 19rem;
+	left: 3rem;
+	width: 50%;
+}
 
+#schedule li {
+	display: inline-block;
+}
+
+#schedule .time {
+	float: left;
+	margin-right: 2rem;
+}
+
+.event_name {
+	float: right;
+	width: 85%;
+}
+
+#tweet {
+	position: absolute;
+	bottom: 3rem;
+	left: 3rem;
+	line-height: 1.2;
+	width: 95%;
+	-webkit-animation-duration: 3s;
+	-webkit-animation-fill-mode: both;
+}
+
+#tweet .screen_name {
+	font-weight: 700;
+	font-size: 2rem;
+}
+
+.tweet .text {
+	font-size: 1.6rem;
+}
+
+@-webkit-keyframes slideInRight {
+	0% {
+		-webkit-transform: translate3d(100%, 0, 0);
+		transform: transform3d(100%, 0, 0);
+		visibility: visible;
+	}
+
+	100% {
+		-webkit-transform: transform3d(0, 0, 0);
+		transform: transform3d(0, 0, 0);
+	}
+}
+
+.slideInRight {
+	-webkit-animation-name: slideInRight;
+}
+
+@-webkit-keyframes slideOutLeft {
+	0% {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+
+	100% {
+		visibility: hidden;
+		-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+	}
+}
+
+.slideOutLeft {
+	-webkit-animation-name: slideOutLeft;
+}
 
 
 

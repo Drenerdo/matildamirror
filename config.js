@@ -5,7 +5,7 @@ var lang = "en";
 
 var weatherParams = {
 	'q': 'New York, US',
-	'units': 'standard',
+	'units': 'imperial',
 	'lang': lang,
 	'weatherRefresh': 600000,
 	'forecastRefresh': 18000000
@@ -29,4 +29,9 @@ var newsfeed = {
 	'url': 'http://rss.cnn.com/rss/cnn_topstories.rss',
 	'limit': 10,
 	'refresh': 20000
+};
+
+var icalFeed = {
+	'url': 'http://webtermine.at/?ec3_ical_wien',
+	'refresh': 600000
 };
