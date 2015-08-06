@@ -61,11 +61,36 @@
 			<div class="news medium" newsItem="true" ng-show="{{newsfeedShow}}">{{newsHeadline}}</div>
 		</div>
 
-		<div id="tweet">
+		<div class="bottom xxsmall" ng-controller="">
 			<span class="screen_name">@{{tweet.user.screen_name}}</span>
 			<br>
 			<span class="text">{{tweet.text}}</span>
 		</div>
+
+		<video id="player" autoplay="true"></video>
+
+		<script>
+		(function(){
+			var mediaOptions = { audio: false, video: true};
+
+			if(!navigator.getUserMedia) {
+				navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+			}
+
+			if(!navigator.getUserMedia) {
+				return alert('getUserMedia not supported in this browser.');
+			}
+
+			navigator.getUserMedia(mediaOptions, success, function(e){
+				console.log(e);
+			});
+
+			function success(stream) {
+				var video = document.querySelector("#player");
+				video.src = window.URL.createObjectURL(stream);
+			}
+		})();
+	</script>
 
 
 		<script src="js/jquery.js"></script>

@@ -204,7 +204,7 @@ body, html {
 	width: 85%;
 }
 
-#tweet {
+.tweet {
 	position: absolute;
 	bottom: 3rem;
 	left: 3rem;
@@ -214,7 +214,7 @@ body, html {
 	-webkit-animation-fill-mode: both;
 }
 
-#tweet .screen_name {
+.tweet .screen_name {
 	font-weight: 700;
 	font-size: 2rem;
 }

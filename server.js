@@ -13,23 +13,8 @@ var app = express();
 
 var config = require("envy").load(__dirname + '/node.config.json');
 
-// var config = JSON.parse(fs.readFileSync('config.json', 'utf8'));
-
-// Twitter API
-// var tw = new Twitter(config.twitter);
-
 
 var file = new static.Server('./');
-
-app.get('/api/tweets', function(req, res) {
-  tw.get('statuses/user_timeline', {count: 65, include_entities: false}, function(err, tweets, response) {
-    if(err) {
-      console.error(err);
-    } else {
-      res.json(tweets);
-    }
-  });
-});
 
 function onRequest(request, response) {
 	console.log("Request recevied");
