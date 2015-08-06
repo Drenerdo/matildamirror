@@ -1,13 +1,18 @@
-var http   	   = require('http'),
-	static 	   = require('node-static'),
-	url    	   = require('url'),
-	rq     	   = require('request'),
-	path   	   = require('path'),
-	google 	   = require('googleapis'),
-	googleapis = require('google-auth-library'),
-	fs 		   = require('fs'),
-	express    = require('express'),
-	twitter    = require('twitter');
+var http   	   = require('http');
+var static 	   = require('node-static');
+var url    	   = require('url');
+var rq     	   = require('request');
+var path   	   = require('path');
+var google 	   = require('googleapis');
+var googleapis = require('google-auth-library');
+var fs 		   = require('fs');
+var express    = require('express');
+
+var Twitter = require('twitter');
+
+
+// Twitter Auth
+// var tw = new Twitter(config.twitter);
 
 var app = express();
 

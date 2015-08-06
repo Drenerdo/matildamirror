@@ -32,6 +32,8 @@ var newsfeed = {
 };
 
 var icalFeed = {
-	'url': 'http://webtermine.at/?ec3_ical_wien',
+	'show': true,
+	'limit': 10,
+	'url': 'https://www.google.com/calendar/ical/t1gannlrafnvmr235st0aeks4lrmarnp%40import.calendar.google.com/public/basic.ics',
 	'refresh': 600000
 };

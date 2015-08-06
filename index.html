@@ -20,9 +20,11 @@
 				<table class="xsmall calendar-table">
 					<tbody>
 						<tr style="opacity: {{1 - $index*(1 / events.length)}};" ng-repeat="event in events | orderBy:'timestamp'">
-							<td class="description">{{event.SUMMARY}}</td>
+							<td class="description">{{events.SUMMARY}}</td>
 							<td class="days dimmed"><span am-time-ago="event.timestamp"></span></td>
 						</tr>
+
+						<tr data-ng-hide="cal.length">You have no events scheduled today!</tr>
 					</tbody>
 				</table>
 			</div>
@@ -61,7 +63,7 @@
 			<div class="news medium" newsItem="true" ng-show="{{newsfeedShow}}">{{newsHeadline}}</div>
 		</div>
 
-		<div class="bottom xxsmall" ng-controller="">
+		<div class="bottom xxsmall">
 			<span class="screen_name">@{{tweet.user.screen_name}}</span>
 			<br>
 			<span class="text">{{tweet.text}}</span>
