@@ -10,6 +10,12 @@
 
 	<body>
 
+		<div class="video">
+			<video id="player" autoplay="true"></video>
+		<div>
+
+		<video id="player" autoplay="true"></video>
+
 		<div class="top left">
 			<div ng-controller="dateCtrl">
 				<div class="date small dimmed">{{currDate | date:'EEEE, d. MMMM yyyy'}}</div>
@@ -68,8 +74,6 @@
 			<br>
 			<span class="text">{{tweet.text}}</span>
 		</div>
-
-		<video id="player" autoplay="true"></video>
 
 		<script>
 		(function(){

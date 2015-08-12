@@ -13,6 +13,11 @@ body, html {
 	 -webkit-font-smoothing: antialiased;
 }
 
+#player {
+	width: inherit;
+	opacity: 0.5;
+}
+
 .wi {
 	line-height: 75px;
 

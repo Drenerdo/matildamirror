@@ -8,12 +8,6 @@ var googleapis = require('google-auth-library');
 var fs 		   = require('fs');
 var express    = require('express');
 
-var Twitter = require('twitter');
-
-
-// Twitter Auth
-// var tw = new Twitter(config.twitter);
-
 var app = express();
 
 var config = require("envy").load(__dirname + '/node.config.json');
