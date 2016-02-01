@@ -3,6 +3,7 @@
 		<title>SmartMirror</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="css/weather-icons.css">
+        <link rel="stylesheet" type="text/css" href="css/notifications.css">
 		<meta name="google" value="notranslate" />
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 	</head>
@@ -53,6 +54,21 @@
         <div class="top-left-notification">
             <span>Notifications</span>
             <a href="page-clothing.html">Click</a>
+            <div class="notification">
+                <div class="icon"></div>
+                <h1>Amenities Request</h1>
+                <p>Your request is on it's way!</p>
+            </div>
+            <div class="notification">
+                <div class="icon"></div>
+                <h1>Clothing</h1>
+                <p>We got some new trending outfits in your closet!</p>
+            </div>
+            <div class="notification">
+                <div class="icon"></div>
+                <h1>Amenities Request</h1>
+                <p>Pillows are on the way!</p>
+            </div>
         </div>
         
         <div class="top-right-music">
@@ -90,6 +106,7 @@
 		<script src="http://code.angularjs.org/1.2.9/angular-animate.min.js"></script>
 		<script src="js/angular-locale_en-us.js"></script>
 		<script src="js/angular-moment.min.js"></script>
+        <script src="js/notification.js"></script>
   		<script src="controllers.js"></script>
 	</body> 
 </html>
