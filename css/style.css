@@ -37,21 +37,21 @@ body, html {
     position: absolute;
     top: 229px;
     font-size: 40px;
-    right: 188px;
+    right: 130px;
     letter-spacing: -2px;
 }
 
 .top-right-closet {
     position: absolute;
-    top: 636px;
+    top: 755px;
     font-size: 40px;
-    right: 188px;
+    right: 127px;
     letter-spacing: -2px;
 }
 
 .lower-third-left-amenities {
     position: absolute;
-    top:634px;
+    top:758px;
     left: 139px;
     font-size: 40px;
 }
@@ -59,7 +59,7 @@ body, html {
 
 .lower-third-center-hor {
 	position: absolute;
-	top:491px;
+	top:536px;
 	height: 200px;
 	right: 50px;
 	left: 50px;
