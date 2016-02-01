@@ -18,6 +18,57 @@ body, html {
 	opacity: 0.5;
 }
 
+.top-left-time {
+	position: absolute;
+	left: 450px;
+	top:50px;
+	text-align: center;
+}
+
+.top-left-notification {
+    position: absolute;
+    top:229px;
+    font-size: 40px;
+    left: 127px;
+    letter-spacing: -2px;
+}
+
+.top-right-music {
+    position: absolute;
+    top: 229px;
+    font-size: 40px;
+    right: 188px;
+    letter-spacing: -2px;
+}
+
+.top-right-closet {
+    position: absolute;
+    top: 636px;
+    font-size: 40px;
+    right: 188px;
+    letter-spacing: -2px;
+}
+
+.lower-third-left-amenities {
+    position: absolute;
+    top:634px;
+    left: 139px;
+    font-size: 40px;
+}
+
+
+.lower-third-center-hor {
+	position: absolute;
+	top:491px;
+	height: 200px;
+	right: 50px;
+	left: 50px;
+	text-align: center;
+	margin-top:-100px;
+	line-height: 100px;
+	font-size: 50px;
+}
+
 .wi {
 	line-height: 75px;
 
@@ -298,4 +349,8 @@ body, html {
   font-style:   normal;
   font-weight:  200;
 }
+
+
+
+/* Product Layout */
 
