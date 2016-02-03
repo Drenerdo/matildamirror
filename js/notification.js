@@ -6,7 +6,7 @@ $('.notification').bind("mouseup mouseleave", function(){
     if ($(this).position().left >= 80) {
         $(this).animate({
             left: 400,
-            opacity: 0
+            opacity: 100
         }, 200,
         function(){
             $(this).html('');

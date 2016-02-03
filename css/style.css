@@ -18,6 +18,12 @@ body, html {
 	opacity: 0.5;
 }
 
+.top-left-clothing {
+    position: absolute;
+    top: 201px;
+    font-size: 40px;
+}
+
 .top-left-time {
 	position: absolute;
 	left: 450px;
