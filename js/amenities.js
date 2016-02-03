@@ -4,3 +4,9 @@ var circle = new ProgressBar.Circle("#bar", {
     color: 'white'
 });
 circle.animate(1);
+
+// Creating a function that will update when the admin confirms a request
+
+(function (){
+	
+})

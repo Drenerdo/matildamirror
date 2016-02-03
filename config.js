@@ -4,11 +4,12 @@ var lang = window.navigator.language;
 var lang = "en";
 
 var weatherParams = {
-	'q': 'New York, US',
-	'units': 'imperial',
-	'lang': lang,
-	'weatherRefresh': 600000,
-	'forecastRefresh': 18000000
+    'q':'New York,US',
+    'units':'imperial',
+    'lang':lang,
+    'weatherRefresh':600000,
+    'forecastRefresh': 18000000,
+    'APPID':'75a3ed05c383bac38e5bf285239ff0ac' // YOUR_FREE_OPENWEATHER_API_KEY
 };
 
 var messages = {

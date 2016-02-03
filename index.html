@@ -37,7 +37,7 @@
 				<span class="wi xdimmed wi-sun{{weatherNow.sun.nextStatus}}"></span> {{weatherNow.sun.nextStatusTime * 1000 | date:'hh:mm'}}
 			</div>
 			<div class="temp" style="display: block;">
-				<span class="icon dimmed wi wi-{{weatherNow.weather[0].icon}}"></span>{{weatherNow.main.temp | number:1}}°
+				{{weatherNow.main.temp | number:1}}° F
 			</div>
 			<div class="forecast small dimmed" style="display: block;">
 				<table class="forecast-table">
@@ -79,10 +79,12 @@
             <span>Amenities</span>
             <a href="page-amenities.html">Click</a>
 
-            <div class="wrapper">
+            <!-- <div class="wrapper">
             	<img src="http://www.suitefolio.com/sflogo.png"/>
             	<div id="bar"></div>
-            </div>
+            </div> -->
+
+            <!-- Adding a script that loads the amenities photos with animation -->
         </div>
         
         <div class="top-right-closet">
@@ -112,6 +114,7 @@
 		<script src="js/angular-moment.min.js"></script>
         <script src="js/notification.js"></script>
         <script src="js/amenities.js"></script>
+        <script src="js/music.js"></script>
   		<script src="controllers.js"></script>
 	</body> 
 </html>

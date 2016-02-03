@@ -1,5 +1,6 @@
 var app = angular.module('mirrorApp', ['ngResource', 'angularMoment', 'ngAnimate']);
 
+
 jQuery.fn.updateWithText = function(text, speed) {
 	if($(this).html() != $('<div/>').html(text)) {
 		$(this).fadeOut(speed/2, function(){
@@ -94,7 +95,7 @@ function dateCtrl($scope) {
 }
 
 function WeatherCtrl($scope, $resource, $timeout) {
-	$scope.weather = $resource('http://api.openweathermap.org/data/2.5/:action',
+	$scope.weather = $resource('http://api.openweathermap.org/data/2.5/weather?q=NewYork,us&appid=44db6a862fba0b067b1930da0d769e98',
 		{action: 'weather', q: weatherParams.q, units: weatherParams.units, lang: weatherParams.lang, callback: 'JSON_CALLBACK'},
 		{get:{method: 'JSONP'}});
 
