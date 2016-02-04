@@ -319,7 +319,21 @@ body, html {
 	-webkit-animation-name: slideOutLeft;
 }
 
+.content-container {
+  position: relative;
+  width: 100%;
+}
 
+.loaded {
+  position: absolute;
+  left: 100%;
+  opacity: 0;
+}
+
+.closet-container {
+  margin-top: 800px; 
+  padding: 0 20px;
+}
 
 @font-face {
   font-family: 'HelveticaNeue-UltraLight';

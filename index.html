@@ -11,7 +11,7 @@
 
 
 	<body>
-
+  
 		<div class="top left">
 			<div ng-controller="dateCtrl">
 				<div class="date small dimmed">{{currDate | date:'EEEE, d. MMMM yyyy'}}</div>
@@ -51,7 +51,8 @@
 				</table>
 			</div>
         </div>
-        
+    
+      <div class="content-container main-container active-container">    
         <div class="top-left-notification">
             <span>Notifications</span>
             <div class="notification">
@@ -89,21 +90,25 @@
         
         <div class="top-right-closet">
             <span>Closet</span>
-            <a href="page-closet.html">Click</a>
+            <a href="#" id="closet-trigger" data-linkTo="page-closet.html" data-container="closet-container">Click</a>
         </div>
 
 
-		<div class="center-ver center-hor">
-			<div class="dishwasher light"></div>
-		</div>
-		<div class="lower-third-center-hor" ng-controller="messageCtrl" ng-show="{{messagesShow}}">
-			<div class="message light"></div>
-		</div>
+    		<div class="center-ver center-hor">
+    			<div class="dishwasher light"></div>
+    		</div>
+    		<div class="lower-third-center-hor" ng-controller="messageCtrl" ng-show="{{messagesShow}}">
+    			<div class="message light"></div>
+    		</div>
+      </div>
+
+      <div class="content-container closet-container loaded"></div>
 
 		
 
 
 		<script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
 		<script src="js/ical_parser.js"></script>
 		<script src="js/moment-with-langs.min.js"></script>
 		<script src="config.js"></script>
