@@ -370,6 +370,17 @@ body, html {
   font-weight:  200;
 }
 
+/* Weather Widget */
+.fe_container {
+    width: 100%;
+    font-weight: 300;
+    min-width: 500px;
+    max-width: 1000px;
+    color: #FFF;
+    margin: 0 auto;
+    height: 245px;
+}
+
 
 
 /* Product Layout */
